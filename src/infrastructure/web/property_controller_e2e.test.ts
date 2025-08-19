@@ -138,14 +138,12 @@ describe("PropertyController", () => {
         const name = faker.person.fullName();
         const description = faker.lorem.word();
         const maxGuests = faker.number.int({ min: 1, max: 9 });
-        const basePricePerNight = 0
 
         // ACTION
         const response = await request(app).post("/properties").send({
             name: name,
             description: description,
             maxGuests: maxGuests,
-            basePricePerNight: basePricePerNight,
         });
 
         // ASSERTION

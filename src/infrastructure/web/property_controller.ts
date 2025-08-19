@@ -13,7 +13,7 @@ export class PropertyController {
         try {
             const { name, description, maxGuests, basePricePerNight } = req.body;
 
-            if(basePricePerNight <= 0){
+            if(basePricePerNight === undefined){
                 return res.status(400).json({
                     message: "O preço base por noite é obrigatório."
                });

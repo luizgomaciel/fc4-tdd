@@ -116,26 +116,6 @@ describe("BookingMapper", () => {
     });
 
     it("deve lançar erro de validação ao faltar campos obrigatórios no BookingEntity", () => {
-        // ARRANGE
-//        var entityProperty = new PropertyEntity();
-//        entityProperty.id = uuidv4();
-//        entityProperty.name = faker.person.fullName();
-//        entityProperty.description = faker.lorem.word();
-//        entityProperty.maxGuests = faker.number.int({ min: 1, max: 9 });
-//        entityProperty.basePricePerNight = faker.number.float({ min: 1, max: 9 })
-
-//        var userEntity = new UserEntity();
-//        userEntity.id = uuidv4();
-//        userEntity.name = faker.person.fullName();
-
-
-//        entity.property = entityProperty;
-//        entity.guest = userEntity;
-//        entity.startDate = faker.date.recent({ days: 10 });
-//        entity.endDate = faker.date.soon({ days: 10 });
-//        entity.guestCount = faker.number.int({ min: 1, max: 9 });
-//        entity.totalPrice = faker.number.float({ min: 1, max: 1000 });
-
         // ACTION && ASSERTIONS
        expect(() => {
            // User validation
