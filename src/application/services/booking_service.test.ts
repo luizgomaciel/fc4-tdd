@@ -183,6 +183,7 @@ describe("BookingService", () => {
     expect(spyFindById).toHaveBeenCalledWith(booking.getId());
     expect(spyFindById).toHaveBeenCalledTimes(2);
     spyFindById.mockRestore();
+
   });
 
   it("deve lançar um erro ao tentar cancelar uma reserva inexistente", async () => {
@@ -192,4 +193,14 @@ describe("BookingService", () => {
       "Reserva não encontrada."
     );
   });
+
+  it("deve retornar erro ao tentar cancelar uma reserva que não existe", async () => {
+    const bookingId = "invalid-id";
+
+    await expect(bookingService.cancelBooking(bookingId)).rejects.toThrowError(
+      "Reserva não encontrada."
+    );
+
+  });
+
 });
